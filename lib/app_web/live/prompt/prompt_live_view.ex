@@ -1,4 +1,4 @@
-defmodule AppWeb.ChatBot.ChatBotLiveView do
+defmodule AppWeb.Prompt.PromptLiveView do
   use AppWeb, :live_view
 
   def render(assigns) do
@@ -23,10 +23,10 @@ defmodule AppWeb.ChatBot.ChatBotLiveView do
           </small>
         </h1>
         <p class="text-[2rem] mt-4 font-semibold leading-10 tracking-tighter text-zinc-900">
-          Chatbot com Phoenix e ChatGPT
+          Exemplo de Prompt com Phoenix e OpenAI
         </p>
         <p class="mt-4 text-base leading-7 text-zinc-600">
-          Aprenda a criar um chatbot com ChatGPT e Phoenix.
+          Aprenda a criar prompts com OpenAI e Phoenix.
         </p>
         <div class="flex flex-col flex-auto h-full">
           <div class="flex flex-col flex-auto flex-shrink-0 rounded-2xl bg-gray-100 h-full p-4">
@@ -168,7 +168,7 @@ defmodule AppWeb.ChatBot.ChatBotLiveView do
 
   def handle_event(
         "process",
-        %{"msg" => _msg},
+        %{"msg" => msg},
         socket
       ) do
     chat = socket.assigns.chat
